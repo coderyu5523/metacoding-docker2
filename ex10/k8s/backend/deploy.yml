@@ -33,21 +33,6 @@ spec:
                 secretKeyRef:
                   name: mysql-secret
                   key: MYSQL_PASSWORD
-          readinessProbe:
-            httpGet:
-              path: /actuator/health
-              port: 8080
-            initialDelaySeconds: 40 # Git clone + build 시간 고려해서 넉넉하게
-            periodSeconds: 5
-            timeoutSeconds: 2
-            failureThreshold: 12
-          livenessProbe:
-            httpGet:
-              path: /actuator/health
-              port: 8080
-            initialDelaySeconds: 60
-            periodSeconds: 10
-            timeoutSeconds: 2
           resources:
             requests:
               cpu: "200m"
