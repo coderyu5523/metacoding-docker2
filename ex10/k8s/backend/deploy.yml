@@ -4,7 +4,7 @@ metadata:
   name: backend
   namespace: metacoding
 spec:
-  replicas: 2 # compose의 backend1, backend2에 해당
+  replicas:
   selector:
     matchLabels:
       app: backend
