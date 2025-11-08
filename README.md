@@ -16,4 +16,4 @@
 
 ### ex09 : nginx 로드밸런서(round-robin) + spring server(2개) + mysql db + front)
 
-### ex10 : minikube 적용
+### ex10 : minikube 배포
